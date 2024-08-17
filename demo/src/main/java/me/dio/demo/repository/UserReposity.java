@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
 public interface UserReposity extends JpaRepository<User, UUID> {
+    public boolean existsByAccountNumber(Long accountNumber);
 }

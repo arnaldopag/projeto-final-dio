@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:sdw2023  # URL corrigida
+    url: jdbc:h2:mem:sdw2023
     username: sdw2023
     password:
   jpa:
@@ -18,6 +18,5 @@ spring:
       settings:
         trace: false
         web-allow-others: false
-
 server:
   port: 8081
