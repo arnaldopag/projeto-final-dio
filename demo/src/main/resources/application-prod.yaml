@@ -8,4 +8,4 @@ spring:
     hibernate:
       ddl-auto: validate
 server:
-  port: 8081
+  port: ${PORT:3000}
