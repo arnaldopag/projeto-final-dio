@@ -3,6 +3,7 @@ package me.dio.demo.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import me.dio.demo.models.user.User;
 
 import java.math.BigDecimal;
 import java.util.UUID;

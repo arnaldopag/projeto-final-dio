@@ -1,11 +1,11 @@
-package me.dio.demo.service.impl;
+package me.dio.demo.services.implementation;
 
-import me.dio.demo.models.User;
+import me.dio.demo.models.user.User;
 import me.dio.demo.repository.UserReposity;
-import me.dio.demo.service.UserService;
+import me.dio.demo.services.UserService;
 import org.springframework.stereotype.Service;
 
-import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -19,10 +19,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findByID(UUID id) {
-        return userReposity.findById(id)
-                .orElseThrow(NoSuchElementException::new);
-
+    public Optional<User> findByID(UUID id) {
+        return userReposity.findById(id);
     }
 
     @Override
